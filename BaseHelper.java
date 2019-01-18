@@ -13,11 +13,10 @@ public class BaseHelper {
 	{
 		return be;
 	}
-	protected  static <T extends BaseHelper> T me(Class<T> t)
+	protected  static <T extends BaseHelper> T me(Class<T> cls)
 	{
 		BrowserEmulator ctx=EduUiContext.getBrowserEmulator();
 		HashMap<BrowserEmulator,BaseHelper> pool=null;
-		Class cls=t.getClass();
 		if(pools.containsKey(cls))
 		{
 			pool=pools.get(cls);
