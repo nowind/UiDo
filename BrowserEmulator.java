@@ -588,6 +588,8 @@ public class BrowserEmulator {
 
 	public BrowserEmulator wait4path(String path,long time)
 	{
+		if(time>100)time=time/1000; //
+		log("wait path:"+path+" timeout:"+new Long(time).toString());
 		new WebDriverWait(this.getBrowserCore(), time)
 			.until(new ExpectedCondition<WebElement>() {
 	            @Override

@@ -2,7 +2,7 @@ package io.github.nowind.uido;
 
 import org.junit.Assert;
 
-public class EduUiContext {
+public class UiContext {
 	 private static ThreadLocal<BrowserEmulator> threadLocalBE = new ThreadLocal<BrowserEmulator>();  
 	 public static void initContext(int type)
 	 {
